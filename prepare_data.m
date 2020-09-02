@@ -97,6 +97,7 @@ s = reshape(permute(s,[1,7,4,5,2,3,6]),[Ns*Ne,Nc,Nd]);
 t = reshape(t,[Ns*Ne,1]);
 
 %% save data
+if ~exist('data/proc','dir');mkdir('data/proc');end
 save(['data/proc/',id,'.mat'],'E','E_nrm','s','coil_map','t','B0_map')
 
 end
