@@ -1,16 +1,11 @@
 #!/bin/bash
-if (( $# < 2 ));then
-	cpu=0
-else
-	cpu=$2
-fi
 if (( $# < 1 ));then
 	inputfilename="data/proc/invivo1.mat"
 else
 	inputfilename=$1
 fi
 
-export CUDA_VISIBLE_DEVICES=$cpu
+export CUDA_VISIBLE_DEVICES=0
 l_rho=0.1
 l_b0=0.02
 tune=1
