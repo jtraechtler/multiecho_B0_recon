@@ -9,7 +9,7 @@ function prepare_data(id)
 %       Example script to prepare data for reconstruction with joint
 %       estimation of metabolite images and field map based on
 %       pre-processed raw data stored in 'data/raw/[id].mat' and  
-%       k-space data stored in '../13C_MRI_simulation/recon/[id].mat'.
+%       k-space data stored in '../13C_MRI_simulation/results/[id].mat'.
 %        - coil_map:    sensitivity map      4-D array: [Nx,Ny,Nz,Nc]
 %        - alpha_map:   flip angle map [rad] 7-D array: [Nx,Ny,Nz,1,1,1,Nm]
 %        - T2s_map:     T2* map [s]          7-D array: [Nx,Ny,Nz,1,1,1,Nm]
@@ -25,8 +25,8 @@ function prepare_data(id)
 %	INPUT:
 %       id:             data set ID
 %
-%	SAVED FILES:							
-%       Simulation results are stored in 'results/[id].mat'
+%	SAVED FILES:				
+%       Processed data ist stored in 'data/proc/[id].mat'
 %        - E:           encoding operator    2-D array: [Ns*Ne,Nv*Nm]
 %        - E_nrm:       normalization factor of E
 %        - s:           k-space              3-D array: [Ns*Ne,Nc,Nd]
